@@ -4,12 +4,12 @@
   "description": "Physics sandbox",
   "browser": "dist/index.js",
   "scripts": {
-    "build": "npm run rollup & npm run less & npm run dist",
+    "build": "npm run clean & npm run rollup & npm run dist",
     "rollup": "rollup -c ./rollup.config.js",
-    "less": "npx less src/waag.less dist/waag.css",
-    "dist": "copyfiles -u 1 assets/**/* dist/.",
+    "dist": "copyfiles -u 1 assets/* dist",
     "tsdserver": "tsdserver -l tcp://localhost:8090",
-    "tsc_watch": "tsc --watch"
+    "tsc_watch": "tsc --watch",
+    "clean": "rimraf dist"
   },
   "files": [
     "dist/**/*"
@@ -18,10 +18,10 @@
   "license": "ISC",
   "devDependencies": {
     "copyfiles": "^2.4.1",
+    "rimraff": "^0.0.1-security",
     "less": "^4.1.2",
     "prettier": "^2.4.1",
     "rollup": "^2.60.1",
-    "rollup-plugin-terser": "7.0.2",
     "rollup-plugin-typescript2": "^0.31.1",
     "tsdserver": "^3.0.3",
     "tslib": "^2.3.1",
