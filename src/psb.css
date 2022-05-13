@@ -1,0 +1,133 @@
+html,
+body,
+div,
+label {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#psb {
+}
+
+#axis {
+  position: absolute;
+  width: 100%;
+  height: 8px;
+  top: 50%;
+  background: #000;
+  border-radius: 4px;
+  border: 2px solid #000;
+}
+
+#plots {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  height: 120px;
+}
+
+.plot {
+  position: absolute;
+  width: 4em;
+  height: 4em;
+  border-radius: 2em;
+  top: 25%;
+  background-color: green;
+  opacity: 0.5;
+}
+
+.vector {
+  position: absolute;
+  top: 50%;
+  height: 8px;
+}
+
+.vector.arrow-right:after {
+  position: absolute;
+  content: '';
+  bottom: -10px;
+  right: -4px;
+  width: 0;
+  height: 0;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-left: 14px solid;
+}
+
+.vector.arrow-left:after {
+  position: absolute;
+  content: '';
+  top: -10px;
+  left: -4px;
+  width: 0;
+  height: 0;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-right: 14px solid;
+}
+
+#current_speed.vector {
+  background-color: #0f0;
+  z-index: 15;
+}
+#current_speed.arrow-right:after {
+  border-left-color: #0f0;
+  z-index: 15;
+}
+#current_speed.arrow-left:after {
+  border-right-color: #0f0;
+  z-index: 15;
+}
+
+#target_speed.vector {
+  background-color: #00f;
+  z-index: 10;
+}
+#target_speed.arrow-right:after {
+  border-left-color: #00f;
+  z-index: 10;
+}
+#target_speed.arrow-left:after {
+  border-right-color: #00f;
+  z-index: 10;
+}
+
+#acceleration.vector {
+  background-color: #f0f;
+  z-index: 5;
+}
+#acceleration.arrow-right:after {
+  border-left-color: #f0f;
+  z-index: 5;
+}
+#acceleration.arrow-left:after {
+  border-right-color: #f0f;
+  z-index: 5;
+}
+
+.hidden {
+  display: none;
+}
+
+#target {
+  cursor: pointer;
+  z-index: 10;
+  user-select: none;
+}
+
+#position {
+  z-index: 5;
+}
+
+#state {
+  display: flex;
+  column-gap: 10px;
+  flex-direction: row;
+}
+#state>label {
+  font-weight: bold;
+}
+#state>div {
+  margin-right: 10px;
+}

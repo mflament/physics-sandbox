@@ -1,0 +1,39 @@
+{
+  "files": [
+    "src/index.ts"
+  ],
+  "exclude": [
+    "node_modules/**"
+  ],
+  "compilerOptions": {
+    "outDir": "dist/",
+    "target": "ES2021",
+    "module": "ES2020",
+    "moduleResolution": "node",
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable",
+      "ScriptHost"
+    ],
+    "incremental": false,
+    "allowJs": false,
+    "allowUmdGlobalAccess": false,
+    "allowSyntheticDefaultImports": true,
+    "importHelpers": true,
+    "sourceMap": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+    "strictFunctionTypes": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "esModuleInterop": false,
+    "experimentalDecorators": false,
+    "emitDecoratorMetadata": false,
+    "resolveJsonModule": false
+  }
+}
